@@ -88,7 +88,7 @@ namespace FI.AtividadeEntrevista.BLL
                 return false;
         }
 
-        bool ValidaPrimeiroDigito(string CPF)
+        private bool ValidaPrimeiroDigito(string CPF)
         {
             int multiplicador = 10;
             int soma = 0;
@@ -104,7 +104,7 @@ namespace FI.AtividadeEntrevista.BLL
             return restoDivisao == Convert.ToInt32(CPF.Substring(9, 1));
         }
 
-        bool ValidaSegundoDigito(string CPF)
+        private bool ValidaSegundoDigito(string CPF)
         {
 
             int multiplicador = 11;
@@ -123,7 +123,7 @@ namespace FI.AtividadeEntrevista.BLL
 
 
         //Valida se todas as posições do CPF não possuem o mesmo valor
-        bool ValidaTodasPosicoes(string CPF)
+        private bool ValidaTodasPosicoes(string CPF)
         {
             int primeiraPosicao = CPF.ElementAt(0);
 
@@ -136,13 +136,12 @@ namespace FI.AtividadeEntrevista.BLL
             return false;
         }
 
-        string NormalizaCPF(string CPF)
+        private string NormalizaCPF(string CPF)
         {
 
             string newCPF = CPF.Substring(0, 3) + CPF.Substring(4, 3) + CPF.Substring(8, 3) + CPF.Substring(12, 2);
 
             return newCPF;
-
         }
     }
 }

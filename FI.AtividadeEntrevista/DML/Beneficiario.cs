@@ -9,7 +9,7 @@ namespace FI.AtividadeEntrevista.DML
     /// <summary>
     /// Classe de beneficiario que representa o registo na tabela de beneficiarios do Banco de Dados associado a um cliente
     /// </summary>
-    class Beneficiario
+    public class Beneficiario
     {
         /// <summary>
         /// Id
