@@ -160,5 +160,25 @@ namespace WebAtividadeEntrevista.Controllers
                 return Json(new { Result = "ERROR", Message = ex.Message });
             }
         }
+
+        [HttpPost]
+        public JsonResult BeneficiarioList()
+        {
+            try
+            {
+                Beneficiario ben1 = new Beneficiario();
+                ben1.Nome = "Teste";
+                ben1.CPF = "363.138.528-50";
+
+
+
+                //Return result to jTable
+                return Json(new { Result = "OK", Records = clientes, TotalRecordCount = qtd });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { Result = "ERROR", Message = ex.Message });
+            }
+        }
     }
 }
